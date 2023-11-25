@@ -1,0 +1,33 @@
+{{ block title }}Results{{ endblock }}
+{{ block content }}
+
+    <p style="text-align:right;">
+        Period: {{ player.round_number }} / {{ C.NUM_ROUNDS }}
+    </p>
+
+    <p style="text-align: center">
+        Your Group's Period Results
+    </p>
+
+    <p style="line-height: 2; text-align: center;">
+        The amount you invested in your group's joint account was {{ player.investment }} token(s).
+        <br>
+        The amount you invested in your personal account was {{ player.personal_account }} token(s).
+        <br>
+        The total amount that you and your other members of your group invested in the group account was {{ group.total_investment}} token(s).
+        <br>
+        Your earnings from the joint account is {{ group.individual_share }} token(s).
+        <br>
+        Your earnings from your personal account are {{ player.personal_account }} token(s).
+        <br>
+        Your earnings in this period are {{ player.payoff_to_display }} token(s).
+    </p>
+
+
+
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+{{ endblock }}

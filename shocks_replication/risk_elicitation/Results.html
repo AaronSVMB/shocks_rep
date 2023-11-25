@@ -1,0 +1,19 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+    <p>
+        The randomly selected decision was {{ player.chosen_lottery }}. For this decision you selected
+        {{ player.relevant_choice_as_string}}. Through randomly drawing a number, your resulting earnings for this section
+        are {{ player.payoff }}.
+    </p>
+
+    <br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+{{ endblock }}
+

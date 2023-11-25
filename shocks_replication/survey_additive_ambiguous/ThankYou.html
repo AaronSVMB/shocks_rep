@@ -1,0 +1,30 @@
+{{ block title }}Survey{{ endblock }}
+{{ block content }}
+
+<p>
+    Your total earnings from the experiment are ${{ rounded_earnings_no_show_up }}.
+    <br>
+    With the specified conversion rates from the various components of this experiment,
+    <br>
+    plus your $ 10.00 participation fee, your earnings totals:
+    <br>
+    ${{ rounded_earnings }}.
+</p>
+
+<p>
+    Thank you for your participation in today's experiment. Before we adjourn, please write your name down on the
+    sticky-note at your desk along with the number you see on your screen, so we can ensure that you all get your
+    correct payments. Then we ask you to complete the following survey which is quite helpful for our research. The
+    password to continue to the survey will be provided once all participants are on this page and the experimenters
+    collect your sticky-notes. Thank you for your patience.
+</p>
+
+{{ formfields }}
+
+    <br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+{{ endblock }}

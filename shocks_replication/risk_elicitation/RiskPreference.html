@@ -1,0 +1,36 @@
+{{ extends "global/Page.html" }}
+{{ block title }} Decision Table {{ endblock }}
+
+{{ block content }}
+
+<p>
+    In the questions that follow, you are going to be asked to make ten decisions. Each decision will be between Option
+    A and Option B. One of the ten choices that you make will be randomly selected to determine your earnings for this
+    part of the experiment.
+</p>
+
+<table class="table">
+    <tr>
+        <th>Options</th>
+    </tr>
+    <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>Your Choice</th>
+    </tr>
+    {{for field in form}}
+    <tr>
+        <td>$1 or $3 each with probability 1/2</td>
+        <td>{{ field.label }}</td>
+        <td> {{ field }}</td>
+    </tr>
+    {{ endfor }}
+</table>
+
+    <br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+{{ endblock }}

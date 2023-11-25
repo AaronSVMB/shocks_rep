@@ -1,0 +1,26 @@
+{{ block title }}Survey{{ endblock }}
+{{ block content }}
+
+  <p>
+    8. The following questions concern your investment decisions throughout the experiment. Please indicate how strongly
+    you agree or disagree with each statement.
+  </p>
+
+  {{ formfield 'reason_own' }}
+
+  {{ formfield 'reason_group' }}
+
+  {{ formfield 'reason_conditional' }}
+
+  {{ formfield 'reason_experiment' }}
+
+  {{ formfield 'reason_adjust' }}
+
+  {{ formfield 'reason_future_rounds' }}
+
+
+  <div style="text-align: center;">
+          {{ next_button }}
+      </div>
+
+{{ endblock }}

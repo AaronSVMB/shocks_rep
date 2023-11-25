@@ -1,0 +1,82 @@
+{{ extends "global/Page.html" }}
+{{ block title }}Investment{{ endblock }}
+{{ block content }}
+
+
+    <p style="text-align:right;">
+        Period: {{ player.round_number }} / {{ C.NUM_ROUNDS }}
+    </p>
+
+    <p>
+        Reminder:
+        <br> Tokens: {{ C.ENDOWMENT }}
+        <br> Multiplier: 0.5
+        <br> All tokens not invested to your Group's Joint Account remain in your Personal Account.
+    </p>
+
+{{ formfield 'investment' }}
+
+
+    <br>
+
+    <div style="text-align:center;">
+        {{ next_button }}
+    </div>
+
+<!-- Soft Timer -->
+
+<div id="timerContainer">
+    Remaining time (secs): <span id="timerCountdown">90</span>
+</div>
+<div id="timerMessage" class="hidden">Please reach a decision</div>
+
+<style>
+.hidden {
+    display: none;
+}
+
+#timerContainer, #timerMessage {
+    position: fixed;
+    top: 10px;  /* Adjust as needed */
+    right: 10px;  /* Adjust as needed */
+}
+
+#timerMessage {
+    color: red;
+    font-weight: bold;
+    animation: slowBlinker 3s linear infinite;
+}
+
+@keyframes slowBlinker {
+    50% {
+        opacity: 0;
+    }
+}
+</style>
+
+<script>
+let timer = 60; // Starting value
+
+const updateTimer = () => {
+    if (timer > 0) {
+        timer--;
+        document.getElementById('timerCountdown').textContent = timer;
+    }
+};
+
+// Update timer every second
+setInterval(updateTimer, 1000);
+
+// Display the alert after 60 seconds and show the "Please make a decision" message.
+setTimeout(
+    function() {
+        document.getElementById('timerContainer').classList.add('hidden');
+        document.getElementById('timerMessage').classList.remove('hidden');
+    },
+    60 * 1000 // 60 seconds
+);
+</script>
+
+
+
+{{ endblock }}

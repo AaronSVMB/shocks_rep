@@ -1,0 +1,23 @@
+{{ block title }}
+    Cumulative Results
+{{ endblock }}
+{{ block content }}
+
+    <p>
+        From the {{ C.NUM_ROUNDS }} periods that you participated in, your cumulative earnings are:
+        <br>
+        {{ cumulative_payoff }} tokens.
+    </p>
+    <p>
+        Thank you for your participation in this portion of the experiment.
+    </p>
+
+    {{ formfields }}
+
+    <br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+{{ endblock }}

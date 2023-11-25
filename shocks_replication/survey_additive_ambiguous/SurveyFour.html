@@ -1,0 +1,20 @@
+{{ block title }}Survey{{ endblock }}
+{{ block content }}
+
+    <p>
+        9. How well do the following statements fit your own decision-making style in your everyday life?
+    </p>
+
+    {{ formfield 'decision_style_facts' }}
+
+    {{ formfield 'decision_style_feelings' }}
+
+    {{ formfield 'decision_style_family' }}
+
+    {{ formfield 'decision_style_religious' }}
+
+  <div style="text-align: center;">
+          {{ next_button }}
+      </div>
+
+{{ endblock }}

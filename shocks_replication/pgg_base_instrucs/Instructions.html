@@ -1,0 +1,333 @@
+{{ block title }} Instructions {{ endblock }}
+
+{{ block content }}
+
+<meta charset="UTF-8" xmlns="http://www.w3.org/1999/html">
+<title>Styled Table</title>
+<style>
+    body {
+        font-size: 18px; /* This sets the font size for all text in the body */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px; /* Specific font size for tables, if you want it different */
+    }
+
+    th, td {
+        border: 1px solid #000; /* Black borders around each cell */
+        text-align: left;
+        padding: 8px;
+        min-width: 65px; /* Adjust as necessary */
+    }
+
+    th {
+        background-color: #f2f2f2; /* Light grey background for headers */
+    }
+</style>
+
+<p>
+    This experiment is a study of group and individual behavior.
+    Everyone in this experiment is receiving exactly the same instructions.
+    You will earn {{participant.payoff_plus_participation_fee()}} simply for participating in this experiment.
+    But if you follow the instructions and make careful decisions, you can earn a significant amount of additional money.
+    You will be paid, privately, at the end of the experiment in cash.
+</p>
+
+<p>
+    During the experiment your earnings will be measured in tokens.
+    Each token is worth <u>4</u> cents, so
+    at the end of the experiment your tokens will be converted to dollars at the rate of <u>25</u> tokens per dollar.
+</p>
+
+<p>
+    It is important that you remain silent and not look at other people's work during the experiment.
+    If you talk, laugh, or exclaim out loud you will be asked to leave and will not be paid.
+    If you have questions or need assistance, raise your hand and an experimenter will come to you.
+</p>
+
+<h2>A. Your Group:</h2>
+
+<p>
+    Each participant will be <strong>randomly</strong> assigned an ID number and randomly assigned to a four-person group.
+    The groups will remain the same throughout the entire experiment.
+    There are <strong>16</strong> participants in today's experiment,
+    so there will be <strong>4</strong> groups in all with <strong>4</strong> members in each group.
+    Because you will be known only by your random ID number,
+    there will be no way for anyone (including experimenters) to know which group you are in or what decisions you make.
+</p>
+
+<h2>B. Your Investment Decisions:</h2>
+
+<p>
+    The experiment includes <u>20</u> decision-making periods.
+    At the start of each period you will receive 10 new tokens.
+    You must decide how many of these 10 tokens you want to invest in your group’s joint account
+    versus how many you want to invest in your own personal account.
+</p>
+<p>
+    The tokens you invest in your personal account will be directly added to your earnings.
+    (For example, if you invest 4 tokens in your personal account then you will earn 4 tokens from your personal account.)
+</p>
+
+<p>
+    Earnings from your group’s joint account will depend on the total number of tokens that you and the other members
+    of your group invest in the joint account.  Each member will earn 0.5 times the total number of tokens invested in
+    the joint account.  (For example, if each member of your group invested 6 tokens in the joint account,
+    then the total group investment would be 24 tokens, and each member would earn 0.5 x 24 tokens, which equals 12 tokens.)
+</p>
+
+<p>
+    To make your investment decisions, simply enter a number between 0.00 and 10.00 indicating the amount you want to
+    invest in your group’s joint account.  The computer will automatically invest the rest of your 10 tokens in your
+    personal account.  (For example, if you enter the number 6.0, then 6 of your tokens will go into your group’s joint
+    account and the computer will put your remaining 4 tokens into your own personal account.)
+</p>
+
+<h2>C. Your Earnings:</h2>
+
+<p>
+    At the end of each period the computer will show you how much you invested in each account,
+    the total amount that was invested in your group’s joint account, and how much you earned from each account.
+    You will not see how each of the other members in your group divided their tokens between their own personal
+    accounts and the group’s joint account.
+</p>
+
+<p>
+    <strong>Your overall earnings in each period will be your earnings from the joint account
+        plus your earnings from your personal account.</strong>
+</p>
+
+<h3>D. Examples:</h3>
+
+<p>
+    Table 1 shows what happens if you invest 6 tokens in your group’s joint account,
+    while the second member of your group invests 3 tokens, the third member invests 1, and the fourth invests 10.
+    The <i>total</i> number of tokens invested in the joint account is 6+3+1+10 = 20, and 0.5*20 = 10.
+    So each member earns 10 tokens from the joint account.
+    You yourself earn an additional (10-6) = 4 tokens from your personal account,
+    the second member earns an additional 7 tokens, the third member earns an additional 9 tokens,
+    and the fourth member earns an additional 0 tokens.
+    You earn 14 tokens in all, 10 from the joint account and 4 from your personal account.
+    As you can see in the bottom row of the table, the other members earn 17, 19, and 10.
+</p>
+
+<br>
+
+<div style="text-align: center;">
+    <h2>Table 1</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th></th>
+            <th>You</th>
+            <th>Mbr 2</th>
+            <th>Mbr 3</th>
+            <th>Mbr 4</th>
+            <th>Explanation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Investment in joint acct:</strong></td>
+            <td>6</td>
+            <td>3</td>
+            <td>1</td>
+            <td>10</td>
+            <td>TOTAL = 6+3+1+10 = 20</td>
+        </tr>
+        <tr>
+            <td><strong>Investment in personal acct:</strong></td>
+            <td>4</td>
+            <td>7</td>
+            <td>9</td>
+            <td>0</td>
+            <td>10 – Investment in joint account</td>
+        </tr>
+        <tr>
+            <td><strong>Earnings from joint acct:</strong></td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>Each member earns 0.5 * TOTAL</td>
+        </tr>
+        <tr>
+            <td><strong>Earnings from personal acct:</strong></td>
+            <td>4</td>
+            <td>7</td>
+            <td>9</td>
+            <td>0</td>
+            <td>Same as personal acct. investment</td>
+        </tr>
+        <tr>
+            <td><strong>Overall earnings for period</strong></td>
+            <td>14</td>
+            <td>17</td>
+            <td>19</td>
+            <td>10</td>
+            <td>= Earnings from both accounts</td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+
+<br>
+
+<p>
+    Table 2 shows what happens if you invest 3.5 tokens in the joint account,
+    while the second member of invests 6.5 tokens in the joint account, the third invests 0, and the fourth invests 9.
+    The total amount invested in the joint account is 3.5+6.5+0+9 = 19, and 0.5*19 = 9.5.
+    So each member earns 9.5 tokens from the joint account.
+    You yourself earn an additional 6.5 tokens from your personal account, so you earn 16 token in all.
+    The other members earn 13, 19.5, and 10.5.
+</p>
+
+<br>
+
+<div style="text-align: center;">
+    <h2>Table 2</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th></th>
+            <th>You</th>
+            <th>Mbr 2</th>
+            <th>Mbr 3</th>
+            <th>Mbr 4</th>
+            <th>Explanation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Investment in joint acct:</strong></td>
+            <td>3.50</td>
+            <td>6.50</td>
+            <td>0.00</td>
+            <td>9.00</td>
+            <td>TOTAL = 3.50+6.50+0.00+9.00 = 19</td>
+        </tr>
+        <tr>
+            <td><strong>Investment in personal acct:</strong></td>
+            <td>6.50</td>
+            <td>3.50</td>
+            <td>10.00</td>
+            <td>1.00</td>
+            <td>10 – Investment in joint account</td>
+        </tr>
+        <tr>
+            <td><strong>Earnings from joint acct:</strong></td>
+            <td>9.50</td>
+            <td>9.50</td>
+            <td>9.50</td>
+            <td>9.50</td>
+            <td>Each member earns 0.5 * TOTAL</td>
+        </tr>
+        <tr>
+            <td><strong>Earnings from personal acct:</strong></td>
+            <td>6.50</td>
+            <td>3.50</td>
+            <td>10.00</td>
+            <td>1.00</td>
+            <td>Same as personal acct. investment</td>
+        </tr>
+        <tr>
+            <td><strong>Overall earnings for period</strong></td>
+            <td>16</td>
+            <td>13</td>
+            <td>19.50</td>
+            <td>10.5</td>
+            <td>= Earnings from both accounts</td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+
+<br>
+
+<p>
+    Table 3 shows what happens if you invest all 10 of your tokens in the joint account,
+    while the other three members do the same.
+    Because the total joint investment is 40 and 0.5*40 20, you earn 20 overall and the other members earn the same.
+</p>
+
+<br>
+
+<div style="text-align: center;">
+    <h2>Table 3</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th></th>
+            <th>You</th>
+            <th>Mbr 2</th>
+            <th>Mbr 3</th>
+            <th>Mbr 4</th>
+            <th>Explanation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Investment in joint acct:</strong></td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>TOTAL = 40</td>
+        </tr>
+        <tr>
+            <td><strong>Investment in personal acct:</strong></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>10 – Investment in joint account</td>
+        </tr>
+        <tr>
+            <td><strong>Earnings from joint acct:</strong></td>
+            <td>20</td>
+            <td>20</td>
+            <td>20</td>
+            <td>20</td>
+            <td>Each member earns 0.5 * TOTAL</td>
+        </tr>
+        <tr>
+            <td><strong>Earnings from personal acct:</strong></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>Same as personal acct. investment</td>
+        </tr>
+        <tr>
+            <td><strong>Overall earnings for period</strong></td>
+            <td>20</td>
+            <td>20</td>
+            <td>20</td>
+            <td>20</td>
+            <td>= Earnings from both accounts</td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+
+<br>
+
+<p>
+    On the next page, you will be asked a short series of questions to ensure your understanding of the decision you
+    are being asked to make. You will have 5 minutes to answer these questions.
+</p>
+
+<br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+<br>
+
+{{ endblock }}

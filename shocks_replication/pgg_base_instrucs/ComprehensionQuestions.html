@@ -1,0 +1,83 @@
+{{ block title }}Quiz{{ endblock }}
+{{ block content }}
+
+<p>
+  Please answer the following to the best of your ability.
+</p>
+
+<p>
+  <strong>Question One</strong>
+</p>
+{{ formfield 'comprehension_question_one'}}
+
+  <br>
+
+<p>
+  <strong>Question Two</strong>
+</p>
+
+<p>
+  You will be interacting with the same randomly formed group for all periods in this portion
+  of the experiment.
+</p>
+
+{{ formfield 'comprehension_question_two'}}
+
+<br>
+
+<p>
+  <strong>Question Three</strong>
+</p>
+
+{{ formfield 'comprehension_question_three_a'}}
+
+{{ formfield 'comprehension_question_three_b'}}
+
+<br>
+
+<p>
+  <strong>Question Four</strong>
+</p>
+
+<p>
+    Below are a series of questions regarding your total earnings. They will help you gain an understanding
+    of the calculation of your earnings, which varies with your decision on how to invest your {{ C.ENDOWMENT }} tokens.
+  </p>
+
+  <p>
+    Each group member, including you, receives {{ C.ENDOWMENT }} tokens. Suppose you invest <strong>5.5 tokens</strong> to
+    your Group's Joint Account. Let's further suppose that the other members of your Group invest a combined
+    <strong>16.5 tokens</strong> to the Group's Joint Account.
+  </p>
+
+  <p>
+    <i>Part A</i>
+    <br> Recall: Joint Account Earnings = (Total Investment to the Group's Join Account) x ( 0.5 )
+    <br>
+  </p>
+
+  {{ formfield 'comprehension_question_four_a' }}
+
+  <p>
+    <i>Part B</i>
+    <br> Recall: Personal Account = 10 - ( Your Investment to the Group's Joint Account )
+  </p>
+
+  {{ formfield 'comprehension_question_four_b' }}
+
+  <p>
+    <i>Part C</i>
+    <br> Recall: Period Earnings = ( Joint Account Earnings ) + ( Personal Account )
+  </p>
+
+  {{ formfield 'comprehension_question_four_c' }}
+
+<br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+
+
+{{ endblock }}

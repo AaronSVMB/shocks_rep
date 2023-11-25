@@ -1,0 +1,19 @@
+{{ block title }}Survey{{ endblock }}
+{{ block content }}
+
+  <p>
+    6. The following questions concern your investment decisions throughout the experiment. Please indicate how strongly
+    you agree or disagree with each statement.
+  </p>
+
+  {{ formfield 'adjustment_positive' }}
+
+  {{ formfield 'adjustment_negative' }}
+
+  {{ formfield 'adjustment_unaffected' }}
+
+  <div style="text-align: center;">
+          {{ next_button }}
+      </div>
+
+{{ endblock }}

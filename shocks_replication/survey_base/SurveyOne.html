@@ -1,0 +1,23 @@
+{{ block title }}Survey{{ endblock }}
+{{ block content }}
+    <p>
+        Answer the following to the best of your abilities.
+    </p>
+
+    {{ formfield 'major' }}
+
+    {{ formfield 'gender' }}
+
+    {{ formfield 'grade' }}
+
+    {{ formfield 'personal_versus_group' }}
+
+    {{ formfield 'change' }}
+
+    <br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+{{ endblock }}

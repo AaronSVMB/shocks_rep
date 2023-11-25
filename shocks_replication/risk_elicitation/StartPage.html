@@ -1,0 +1,98 @@
+{{ extends "global/Page.html" }}
+{{ block title }} Part Two {{ endblock }}
+
+{{ block content }}
+
+<style>
+  body {
+    font-size: 18px; /* Set the font-size to your preference */
+  }
+</style>
+
+  <p>
+    Thank you for your participation in the first part of this experiment. We move on to an individual component that is
+    described to you below.
+  </p>
+
+  <p>
+    In the questions that follow, you are going to be asked to make ten decisions. Each decision will be between Option A
+    and Option B. One of the ten choices you make will be randomly selected to determine your earnings for this part of
+    the experiment.
+  </p>
+
+  <p>
+    After making all ten choices, the computer will randomly select one of the and display which decision you chose. The
+    computer will "roll" a 10-sided die to produce a number between one and ten. The die-roll will determine the outcome of the
+    selected lottery.
+  </p>
+
+  <p>
+    The following are examples of how your earnings are determined.
+  </p>
+
+  <p>
+    Example 1: Suppose the computer randomly selected the following decision.
+  </p>
+
+<table class="table">
+    <tr>
+        <th>Options</th>
+    </tr>
+    <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>Your Choice</th>
+    </tr>
+    <tr>
+        <td>$1 or $3 each with probability 1/2</td>
+        <td>$0.1 with probability 9/10 or $5 with probability 1/10</td>
+        <td>A or B</td>
+    </tr>
+</table>
+
+  <p>
+    Suppose that for this decision you selected Option A. If the computer "rolls" any number 1 through 5, you will receive $3.
+    If the computer "rolls" any number 6 through 10, you will receive $1.
+  </p>
+
+<p>
+  Example 2: Suppose the computer randomly selected the following decision.
+</p>
+
+<table class="table">
+    <tr>
+        <th>Options</th>
+    </tr>
+    <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>Your Choice</th>
+    </tr>
+    <tr>
+        <td>$1 or $3 each with probability 1/2</td>
+        <td>$0.1 with probability 3/10 or $5 with probability 7/10</td>
+        <td>A or B</td>
+    </tr>
+</table>
+
+<p>
+  Suppose that for this decision you selected B. If the computer "rolls" any number 1 through 7, you will receive $5.
+  If the computer rolls 8 through 10, you will receive $0.1.
+</p>
+
+  <p>
+    You may choose Option A for some decisions and Option B for others. Your earnings for this part of the experiment will
+    be added to your earnings from the other part of the experiment and included in your cash payment.
+  </p>
+
+  <p>
+    If you have any questions, please raise your hand. If not feel free to proceed to the next page.
+  </p>
+
+  <br>
+
+    <div style="text-align: center;">
+        {{ next_button }}
+    </div>
+
+{{ endblock }}

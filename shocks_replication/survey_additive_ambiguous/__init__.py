@@ -291,6 +291,8 @@ class ThankYou(Page):
         # Round up to the nearest dollar
         rounded_earnings = math.ceil(total_earnings)
 
+        self.participant.payoff = math.ceil(self.participant.payoff)
+
         return {
             'rounded_earnings_no_show_up': rounded_earnings_no_show_up,
             'rounded_earnings': rounded_earnings,

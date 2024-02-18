@@ -174,6 +174,12 @@ class ComprehensionQuestions(Page):
             return 'Reconsider your answer to question four C: Your Period Earnings are the sum of your earnings from the Joint Account' \
                    ' and your Personal Account. (If you answered four A and B correctly, sum those two answers).'
 
+    @staticmethod
+    def before_next_page(player: Player, timeout_happened):
+        end_time = time.time()
+        elapsed_time = end_time - player.start_time
+        player.time_spent_compqs += elapsed_time
+
 
 class ResultsWaitPage(WaitPage):
     pass

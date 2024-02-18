@@ -187,7 +187,7 @@ class Player(BasePlayer):
             [1, 'Almost Always'],
             [2, 'Often'],
             [3, 'Rarely'],
-            [4, 'Almost Never']
+            [4, 'Never']
         ],
         widget=widgets.RadioSelectHorizontal,
         label="When making important decisions, I consult with one or more family members."
